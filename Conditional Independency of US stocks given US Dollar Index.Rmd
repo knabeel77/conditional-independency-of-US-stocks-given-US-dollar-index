@@ -88,7 +88,7 @@ plot(g, vertex.label = V(g)$names, edge.label = E(g)$weight)
 ```{r}
 #reading the data and getting rid of HSI
 
-df<- read.csv("https://raw.githubusercontent.com/Amireshhhh/Project_Petrovic/main/returns_data.csv")
+df<- read.csv("https://raw.githubusercontent.com/knabeel77/conditional-independency-of-US-stocks-given-US-dollar-index/main/returns_data.csv")
 
 df<- df[,-12]
 
@@ -138,7 +138,7 @@ for (i in 1:12){
 
 
 ```{r}
-df<- read.csv("https://raw.githubusercontent.com/Amireshhhh/Project_Petrovic/main/returns_data_classified.csv")
+df<- read.csv("https://raw.githubusercontent.com/knabeel77/conditional-independency-of-US-stocks-given-US-dollar-index/main/returns_data_classified.csv")
 
 df<- df[,-12]
 
