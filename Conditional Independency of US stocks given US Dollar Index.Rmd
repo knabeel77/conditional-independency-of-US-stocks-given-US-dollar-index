@@ -1,8 +1,9 @@
 ---
 title: "conditional independency of US stocks given US dollar index"
 author: "Mohammad Nabeel Khan"
-date: '2023-03-02'
-output: html_document
+date: "2023-03-02"
+output:
+  output: rmarkdown::github_document
 ---
 
 
@@ -86,7 +87,7 @@ plot(g, vertex.label = V(g)$names, edge.label = E(g)$weight)
 ```
 
 ```{r}
-#reading the data and getting rid of HSI
+# reading the data and getting rid of HSI
 
 df<- read.csv("https://raw.githubusercontent.com/knabeel77/conditional-independency-of-US-stocks-given-US-dollar-index/main/returns_data.csv")
 
@@ -129,7 +130,7 @@ for (i in 1:12){
   
 }
 
-#the result of the test is available as a list, each element corresponds to a time-slice 
+# the result of the test is available as a list, each element corresponds to a time-slice 
 
   
 
@@ -143,7 +144,7 @@ df<- read.csv("https://raw.githubusercontent.com/knabeel77/conditional-independe
 df<- df[,-12]
 
 
-#different slices corresponding to federal reserve interest rates hiking/cutting/pausing
+# different slices corresponding to federal reserve interest rates hiking/cutting/pausing
 
 df1<- df[ df$Date> "2000-11-01"  &   df$Date < "2001-12-31",-1 ]
  
@@ -183,7 +184,7 @@ for (i in 1:12){
 
 
 ```{r}
-#plotting the graphs for inverse of correlation matrix
+# plotting the graphs for inverse of correlation matrix
 inver<- list()
 for(i in 1:12){
   inver[[i]]<- solve(cor(dff[[i]]))
@@ -198,7 +199,7 @@ for(i in 1:12){
 }
 
 
-#plotting the graph for conditional independence test on the continuous returns
+# plotting the graph for conditional independence test on the continuous returns
 
 graphss <- list()
 for(i in 1:12){
